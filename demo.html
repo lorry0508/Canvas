@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canvas</title>
+  <style>
+    #canvas {
+      background: #000;
+    }
+    #canvas1 {
+      background: #000;
+      width: 400px;
+      height: 400px;
+    }
+  </style>
+</head>
+<body>
+  <!-- 改变画布的大小呢，有三种方式:
+    HTML 设置 width、height；
+    CSS 设置 width、height；
+    JS 动态设置 width、height。 -->
+
+  <!-- HTML 设置 width、height； -->
+  <!-- <canvas id="canvas" width="400" height="400">
+  <script>
+    var canvas = document.getElementById("canvas");
+    var context = canvas.getContext("2d");
+
+    context.beginPath();
+    context.arc(100, 100, 50, 0, Math.PI * 2, true);
+    context.closePath();
+    context.fillStyle = "rgb(255, 255, 255)";
+    context.fill();
+  </script> -->
+
+  <!-- CSS 设置 width、height； -->
+  <!-- <canvas id="canvas1">
+    <script>
+      var canvas = document.getElementById("canvas1");
+      var context = canvas.getContext("2d");
+  
+      context.beginPath();
+      context.arc(100, 100, 50, 0, Math.PI * 2, true);
+      context.closePath();
+      context.fillStyle = 'rgb(255,255,255)';
+      context.fill();
+  </script> -->
+
+  <!-- JS 动态设置 width、height -->
+  <canvas id="canvas">
+  <script>
+    var canvas = document.getElementById("canvas");
+    var context = canvas.getContext("2d");
+    var cx = canvas.width = 400;
+    var cy = canvas.height = 400;
+
+    context.beginPath();
+    context.arc(100, 100, 50, 0, Math.PI * 2, true);
+    context.closePath();
+    context.fillStyle = 'rgb(255,255,255)';
+    context.fill();
+  </script>
+  <!-- 所以我们尽量使用 HTML 的width 和 height 属性或者直接使用 JS 动态来设置宽高，不要使用 CSS 设置。 -->
+</body>
+</html>

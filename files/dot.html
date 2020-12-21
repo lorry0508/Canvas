@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #canvas {
+      background: #000;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="canvas">
+  <script>
+    var canvas = document.getElementById("canvas");
+    var context = canvas.getContext("2d");
+    var cx = canvas.width = 400;
+    var cy = canvas.height = 400;
+
+    context.beginPath(); // 起始一条路径，或重置当前路径
+    context.arc(100, 100, 1, 0, Math.PI * 2, true); // 创建弧/曲线
+    context.closePath(); // 创建从当前点回到起始点的路径
+    context.fillStyle = 'rgb(255,255,255)'; // 设置或返回用于填充绘画的颜色、渐变或模式
+    context.fill(); // 填充当前绘图（路径）
+
+    // // 四分之一圆弧，顺时针方向
+    // context.beginPath();
+    // context.arc(100, 100, 50, 0, Math.PI * 0.5, false);
+    // // context.closePath(); //闭合与否
+    // context.strokeStyle="white";
+    // context.stroke();
+
+    /* 
+    arc() 方法创建弧/曲线（用于创建圆或部分圆）。
+      context.arc(x,y,r,sAngle,eAngle,counterclockwise);
+      x：圆心的 x 坐标
+      y：圆心的 y 坐标
+      r：圆的半径
+      sAngle：起始角，以弧度计（弧的圆形的三点钟位置是 0 度）
+      eAngle：结束角，以弧度计
+      counterclockwise：可选。规定应该逆时针还是顺时针绘图。false 为顺时针，true 为逆时针
+     */
+  </script>
+</body>
+</html>
